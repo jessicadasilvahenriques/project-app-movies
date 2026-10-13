@@ -1,0 +1,33 @@
+.movies-page {
+  background-color: #141414;
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.movies-page h1 {
+  margin-bottom: 30px;
+}
+
+.movies-page h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.movies-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .movies-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .movies-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
