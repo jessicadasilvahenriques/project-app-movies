@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import CardMovie from "../components/card";
-import "./MoviesPage.css";
+import "./principalsPages.css";
 
 type Movie = {
   id: number;
@@ -33,7 +33,7 @@ function MoviesPage() {
             `https://api.themoviedb.org/3/movie/${category}`,
             {
               headers: {
-                Authorization: `Bearer 1d4565ccd007b60cf5465cc2628b379b`,
+                Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZDQ1NjVjY2QwMDdiNjBjZjU0NjVjYzI2MjhiMzc5YiIsIm5iZiI6MTc5MTgzMDgyNy42MTY5OTk5LCJzdWIiOiI2YWNkMmIyYmY0ZDNiMzMwNjVkNWFlYjMiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.zT4-mvF0lIzwmY0gaA3VYqosVqm47LtFeiy3SHRnyrw`,
               },
             }
           );
