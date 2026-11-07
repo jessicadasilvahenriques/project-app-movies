@@ -1,0 +1,39 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #181818;
+  border-bottom: 1px solid #333;
+}
+
+header h1 {
+  color: white;
+  font-size: 26px;
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+}
+
+header nav a {
+  text-decoration: none;
+}
+
+header nav button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #555;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+header nav button:hover {
+  background-color: #e50914;
+  border-color: #e50914;
+}

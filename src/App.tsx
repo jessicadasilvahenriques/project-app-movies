@@ -4,10 +4,13 @@ import MoviesPage from "./Pages/MoviesPage";
 import TvPage from "./Pages/TvPage";
 import DetailsMoviesPage from "./Pages/DetailsMoviesPage";
 import DetailsTvPage from "./Pages/DetailsTvPage";
+import Header from "./components/header";
 
 function App() {
   return (
     <BrowserRouter>
+
+      <Header />
       <Routes>
         {/* Página inicial */}
         <Route path="/" element={<Navigate to="/movies" />} />

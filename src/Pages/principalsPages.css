@@ -1,33 +1,48 @@
+/* Página principal de filmes e séries */
 .movies-page {
-  background-color: #141414;
-  color: white;
-  min-height: 100vh;
-  padding: 20px;
+  padding: 30px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
+/* Título principal da página */
 .movies-page h1 {
-  margin-bottom: 30px;
+  font-size: 32px;
+  margin-bottom: 35px;
+  color: white;
 }
 
+/* Títulos das categorias */
 .movies-page h2 {
-  margin-top: 30px;
+  font-size: 22px;
   margin-bottom: 20px;
+  color: white;
 }
 
+/* Grelha dos cartões */
 .movies-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
+  margin-bottom: 50px;
 }
 
-@media (max-width: 900px) {
-  .movies-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
+/* Adaptar a grelha para telemóveis */
 @media (max-width: 600px) {
+  .movies-page {
+    padding: 20px;
+  }
+
+  .movies-page h1 {
+    font-size: 26px;
+  }
+
+  .movies-page h2 {
+    font-size: 20px;
+  }
+
   .movies-list {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 }

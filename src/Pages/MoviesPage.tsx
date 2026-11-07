@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import CardMovie from "../components/card";
+import CardMovie from "../components/cardMovie";
 import "./principalsPages.css";
 
 type Movie = {
@@ -9,7 +9,6 @@ type Movie = {
   vote_average: number;
   release_date: string;
 };
-
 
 // Várias secções
 function MoviesPage() {
@@ -21,12 +20,7 @@ function MoviesPage() {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const categories = [
-          "popular",
-          "now_playing",
-          "top_rated",
-          "upcoming"
-        ];
+        const categories = ["popular", "now_playing", "top_rated", "upcoming"];
 
         for (const category of categories) {
           const response = await fetch(
@@ -35,7 +29,7 @@ function MoviesPage() {
               headers: {
                 Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZDQ1NjVjY2QwMDdiNjBjZjU0NjVjYzI2MjhiMzc5YiIsIm5iZiI6MTc5MTgzMDgyNy42MTY5OTk5LCJzdWIiOiI2YWNkMmIyYmY0ZDNiMzMwNjVkNWFlYjMiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.zT4-mvF0lIzwmY0gaA3VYqosVqm47LtFeiy3SHRnyrw`,
               },
-            }
+            },
           );
 
           if (!response.ok) {
@@ -73,6 +67,8 @@ function MoviesPage() {
     return movies.map((movie) => (
       <CardMovie
         key={movie.id}
+        id={movie.id}
+        type="movie"
         poster={
           movie.poster_path
             ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
@@ -90,24 +86,16 @@ function MoviesPage() {
       <h1>Movies</h1>
 
       <h2>Popular</h2>
-      <div className="movies-list">
-        {renderMovies(popular)}
-      </div>
+      <div className="movies-list">{renderMovies(popular)}</div>
 
       <h2>Now Playing</h2>
-      <div className="movies-list">
-        {renderMovies(nowPlaying)}
-      </div>
+      <div className="movies-list">{renderMovies(nowPlaying)}</div>
 
       <h2>Top Rated</h2>
-      <div className="movies-list">
-        {renderMovies(topRated)}
-      </div>
+      <div className="movies-list">{renderMovies(topRated)}</div>
 
       <h2>Upcoming</h2>
-      <div className="movies-list">
-        {renderMovies(upcoming)}
-      </div>
+      <div className="movies-list">{renderMovies(upcoming)}</div>
     </div>
   );
 }

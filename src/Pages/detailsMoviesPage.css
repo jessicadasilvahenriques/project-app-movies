@@ -1,0 +1,96 @@
+/* Página de detalhes */
+.details-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  color: white;
+}
+
+/* Organização do cartaz e das informações */
+.details-content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Cartaz principal */
+.details-poster {
+  width: 280px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Informações do filme ou série */
+.details-info {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Título principal */
+.details-info h1 {
+  font-size: 32px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Títulos das secções */
+.details-info h2 {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+/* Textos */
+.details-info p {
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* Grelha do elenco */
+.cast-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+/* Adaptar para telemóveis */
+@media (max-width: 600px) {
+  .details-page {
+    padding: 20px;
+  }
+
+  .details-poster {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .details-info h1 {
+    font-size: 26px;
+  }
+
+  .cast-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .crew-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+}
+
+/* Avaliação do filme ou série */
+.details-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+/* Estrela da avaliação */
+.rating-star {
+  color: #ffc107;
+  font-size: 24px;
+}

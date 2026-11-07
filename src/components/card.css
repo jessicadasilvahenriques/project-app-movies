@@ -1,48 +1,58 @@
+/* Link do cartão */
+.movie-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
 
-/* Cartão do filme */
+/* Cartão do filme ou série */
 .movie-card {
-  display: flex;
-  flex-direction: column;
-  background-color: #242424;
-  color: white;
+  background-color: #1e1e1e;
   border-radius: 10px;
   overflow: hidden;
+  height: 100%;
   transition: transform 0.3s;
 }
 
 /* Efeito ao passar o rato */
 .movie-card:hover {
-  transform: scale(1.03);
-  cursor: pointer;
+  transform: scale(1.04);
 }
 
-/* Poster do filme */
+/* Imagem do filme ou série */
 .movie-image {
   width: 100%;
-  height: 320px;
+  height: 300px;
   object-fit: cover;
 }
 
-/* Informações do filme */
+/* Informações do cartão */
 .movie-info {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   padding: 15px;
 }
 
-/* Título do filme */
+/* Título */
 .movie-info h2 {
   font-size: 16px;
-  margin: 0;
+  margin: 0 0 10px;
 }
 
-/* Classificação e data */
-.movie-data {
+/* Avaliação */
+.movie-rating {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   gap: 10px;
-  font-size: 13px;
-  color: #cccccc;
 }
 
+/* Estrelas */
+.stars {
+  color: #ffc107;
+  font-size: 18px;
+}
+
+/* Ano de lançamento */
+.movie-date {
+  color: #aaa;
+  font-size: 14px;
+  margin-top: 10px;
+}
